@@ -1,0 +1,17 @@
+[
+  {
+    "image": "catalogue/projet1.png",
+    "title": "ImpactWave",
+    "description": "Plateforme d’automatisation et dashboards pour traders."
+  },
+  {
+    "image": "catalogue/projet2.png",
+    "title": "Backtest API",
+    "description": "Pipeline automatisé pour stratégies SMC."
+  },
+  {
+    "image": "catalogue/projet3.png",
+    "title": "Portfolio Web",
+    "description": "Site web responsive avec intégration d’API."
+  }
+]

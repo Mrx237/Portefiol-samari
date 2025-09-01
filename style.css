@@ -1,0 +1,101 @@
+/* RESET */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: Arial, sans-serif; background: #ffffff; color: #333; line-height: 1.6;}
+a {text-decoration: none; color: inherit;}
+
+/* COULEURS */
+:root {
+  --blue: #00aaff;   /* bleu ciel */
+  --light: #ffffff;
+  --grey: #f4f9fc;
+  --dark: #333;
+}
+
+/* HEADER */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 30px; background: var(--light); 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky; top: 0; z-index: 1000;
+}
+header .logo {font-size: 22px; font-weight: bold; color: var(--blue);}
+header nav ul {display: flex; list-style: none; gap: 20px;}
+header nav a {color: var(--dark); font-weight: bold;}
+header nav a:hover {color: var(--blue);}
+.menu-toggle {display: none; cursor: pointer; font-size: 22px;}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, var(--blue), #0077cc);
+  color: var(--light); text-align: center; padding: 100px 20px;
+}
+.hero .highlight {color: yellow;}
+.hero h1 {font-size: 40px; margin-bottom: 20px;}
+.hero p {max-width: 600px; margin: auto;}
+.btn-group {margin-top: 20px;}
+.btn {
+  padding: 10px 20px; border-radius: 6px; font-weight: bold; display: inline-block;
+}
+.btn.primary {background: var(--light); color: var(--blue);}
+.btn.secondary {background: var(--blue); color: var(--light); border: 2px solid var(--light);}
+
+/* SECTIONS */
+.section {padding: 60px 20px; text-align: center;}
+.section.grey {background: var(--grey);}
+.section h2 {font-size: 28px; margin-bottom: 30px; color: var(--blue);}
+
+/* CARDS */
+.cards {display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;}
+.card {
+  background: var(--light); padding: 20px; border-radius: 12px; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1; min-width: 250px; max-width: 300px;
+}
+.card h3 {margin-bottom: 10px; color: var(--blue);}
+
+/* CATALOGUE */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.project-card {
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.project-card img {width: 100%; height: 180px; object-fit: cover;}
+.project-card h3 {margin: 15px; font-size: 20px; color: var(--blue);}
+.project-card p {margin: 0 15px 15px; color: #666;}
+
+/* FORM */
+form {max-width: 500px; margin: 20px auto; display: grid; gap: 15px;}
+form input, form textarea {
+  padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;
+}
+form button {border: none; cursor: pointer;}
+
+/* FOOTER */
+footer {background: var(--blue); color: var(--light); text-align: center; padding: 20px; margin-top: 40px;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header nav {display: none;}
+  .menu-toggle {display: block;}
+}
+/* Description personnelle au-dessus du catalogue */
+#catalogue .about-me {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
